@@ -8,6 +8,11 @@ namespace SearchfightManager
     {
         static async Task Main(string[] args)
         {
+            if (args.Length == 0)
+            {
+                Console.WriteLine("No arguments, please pass any arguments to search and count");
+                Environment.Exit(0);
+            }
             var client = new HttpClient();
             var queryParams = "?args=";
 
